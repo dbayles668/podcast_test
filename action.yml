@@ -1,0 +1,18 @@
+name: "podcast generator"
+author: "David Bayles"
+description: "generates a feed from a yaml file"
+runs:
+  using: "docker"
+  image: "Dockerfile"
+branding:
+  icon: "git-branch"
+  color: "red"
+inputs:
+  email:
+    description: commiters email
+    required: true
+    default: ${{ github.actor }}@localhost
+  name:
+    description: commiters name
+    required: true
+    default: ${{ github.actor }}
